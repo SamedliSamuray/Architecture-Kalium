@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Darker+Grotesque:wght@300..900&family=Happy+Monkey&family=Ojuju:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Heebo:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+
+
+body{
+    position: relative;
+}
+
+
+/* Header - Aciq navbar */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-bottom: 1px solid black;
+    align-items: center;
+    padding: 50px 0px;
+    position: relative;
+    /* position: fixed; */
+    width: 100%;
+}
+
+
+.head_logo img{
+    width: 50%;
+}
+
+
+/* bars - bagli navbar acmaq ucun */
+.bars{
+    z-index: 2;
+    position: relative;
+}
+.bar{
+    font-size: 30px;
+    color: rgb(186, 185, 185);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+.bar:hover{
+    transform: scaleY(130%);
+    color: black;
+
+}
+
+
+/* Bagli Navbar */
+.nav{
+    z-index: 1;
+    position: fixed;
+    transition: 1s;
+    font-size: 55px;
+    background-color: rgba(255, 255, 255, 0.979);
+    width: 100%;
+    opacity: 1;
+    height: 740px;
+    top: -120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start; */ 
+}
+
+
+/* Bagli navbari acmaq ucun input:checkbox */
+
+#click{
+    display: none;
+}
+#click:checked~.nav{
+    opacity: 1;
+    top: 0px;
+}
+
+/*        Bagli navbar listi */
+
+.nav_list{
+    margin: 0px 60px;
+    padding: 0px 70px;
+    width:fit-content;
+}
+.nav_list ul{
+    top: 10%;
+    left: 15%;
+    position: relative;
+    font-family: "Gruppo", sans-serif;
+    /* display: flex;
+    flex-direction: column; */
+}
+.nav_list ul li{
+    position: relative;
+}
+
+
+
+/* list icindeki listler - dropdown */
+
+.second_li{
+    position: absolute;
+    left: -15%;
+    /* display: none; */
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0) !important;
+    transform: scaleY(0);
+    transition-duration: 1s !important; 
+
+}
+
+
+.li_mom:hover ul .second_li{
+    transform: scaleY(1);
+    position: relative;
+    color: gray !important;
+}
+
+
+a[href="#firsta"]{
+    color: gray !important;
+}
+
+a[href="#firsta"]:visited{
+    color: gray !important;
+}
+
+.nav_list ul a{
+    transition-duration: 1s;
+}
+
+.nav_list ul a:link{
+    color: black;
+}
+
+.nav_list ul a:visited{
+    color: black;
+}
+
+.nav_list ul a:hover{
+    color: grey;
+}
+
+/* Bagli navbarin foot hissesi */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 180px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.footer a:link,
+.footer a:visited{
+    color: black;
+}
+
+.foot_3 ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row; 
+    gap: 20px;
+    
+}
+
+.foot_3 ul a{
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.foot_3 ul a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: -2px;
+    top: -7px;
+    height: 100%;
+    padding: 7px 2px;
+    transition: 0.5s;
+    border-radius: 50%;
+    background-color: rgba(246, 246, 246, 0.005);
+}
+
+.foot_3 ul a:hover::before{
+    background-color: rgba(255, 255, 255, 0.936);
+   
+}
+
+.foot_3 ul  i{
+    color:goldenrod;
+    background-color: black;
+    padding: 5px 6px;
+    border-radius: 50%;
+}
+
+.foot_1 a{
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    font-family: "Gruppo", sans-serif;
+    
+}
+.foot_1 a::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    transition: 1s;
+    background-color: orange;
+}
+.foot_1 a:hover{
+    color: rgb(92, 92, 92);
+   
+}
+.foot_1 a:hover::before{
+    width:100%;
+   
+}
+
+
+
+
+
+/* .first_div -- Slidebar  --Home photo */
+
+.first_div{
+    height: 80vh;
+    background-image: url("https://s1.1zoom.me/b5050/837/425731-svetik_1920x1080.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: back 20s ease 1s infinite alternate;
+    position: relative;
+    text-align: center;
+
+}
+
+@keyframes back {
+    25%{background-image: url("https://s1.1zoom.me/b5050/837/425731-svetik_1920x1080.jpg");}
+    50%{ background-image:url("https://c.wallhere.com/photos/d4/21/1920x1080_px_architecture_building_design_house_interior_mansion_Pool-1587393.jpg!d");}
+    75%{ background-image:url("https://s1.1zoom.me/b4955/644/USA_Villa_Houses_Dana_Point_California_Design_547465_1920x1080.jpg");}
+    100%{ background-image: url("https://wallpapers.com/images/hd/home-background-7b2dfoqu6cgnl7r1.jpg");}
+}
+
+
+
+
+/* .info --Galeri */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 40px;
+}
+
+
+.info_head{
+    margin: 50px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    font-family: "Gruppo", sans-serif;
+    position: relative;
+}
+
+.info_head h1{
+    font-size: 50px;
+}
+.info_head p{
+    font-size: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 500px;
+}
+
+/* infonun galerisi */
+
+.container{
+    /* margin: 0px 0px; */
+    width: 1200px;
+    height: 60%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-rows: repeat(2,1fr);
+    position: relative;
+}
+
+
+.box{
+    position: relative;
+}
+
+
+.box img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: relative;
+}
+
+
+.container div:first-child{
+    grid-column: 1/8;
+}
+
+
+.box_write{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    /* z-index: 1; */
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.box:hover .box_write{
+    background-color: rgba(255, 255, 255, 0.87);
+}
+
+.box_write2{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    margin: 20px 10px 10px 20px;
+    top: 0px;
+    left: 0px;
+    display: block;
+    /* z-index: 1; */
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.box:hover .box_write2{
+    background-color: rgba(255, 255, 255, 0.87);
+}
+
+
+.container .box h3{
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    font-size: 30px;
+    font-family: "Gruppo", sans-serif;
+    color: black;
+    transition: 1s;
+    transform: scaleY(0);
+}
+
+.container .box p{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    font-size: 20px;
+    font-family: "Gruppo", sans-serif;
+    color: grey;
+    transition: 0.7s;
+    transform: scaleY(0);
+}
+
+.box:hover h3{
+    transform: scaleY(1);
+}
+
+.box:hover p{
+    transform: scaleY(1);
+}
+
+
+
+.container div:nth-child(2){
+    grid-column: 8/12;
+}
+
+.container div:nth-child(3){
+    grid-column: 1/5;
+}
+
+.container div:nth-child(4){
+    grid-column: 5/8;
+}
+
+.container div:nth-child(5){
+    grid-column: 8/12;
+}
+
+
+
+.container .last_write{
+    position: relative;
+    grid-column: 1/5;
+    font-family: "Gruppo", sans-serif;
+    color: black;
+    display: block;
+}
+
+.container .last_write a{
+    color: black;
+
+}
+
+#a_f:hover {
+    color: grey;
+}
+
+
+
+/* .about Qara  melumat hissesi */
+
+.about{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(32, 31, 31);
+}
+
+.about_head{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 20px 0px;
+    color: white;
+    font-family: "Gruppo", sans-serif;
+}
+
+.about_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 90px;
+    height: 166px;
+}
+
+.about_info h1{
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 40%;
+    margin-left: 65px;
+}
+
+.about_info p{
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 37%;
+    font-size: 20px;
+    color: grey;
+    margin-right: 65px;
+}
+
+
+hr{
+    border:1px solid grey ;
+}
+
+/* partnyorlar haqqinda melumat */
+
+.partners_dad{
+    background-color: whitesmoke;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.partners{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Gruppo", sans-serif;
+    flex-direction: column;
+    padding: 10px 200px;
+    position: relative;
+}
+
+.partners_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.partners_head h2{
+    font-size: 30px;
+}
+
+.partners_head p{
+    width: 500px;
+    font-size: 20px;
+}
+
+
+.partners_name{
+    display: grid;
+    width: 1200px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin: 40px 0px;
+    gap: 30px;
+}
+
+.partner{
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+.partner img{
+    width: 100%;
+    position: relative;
+}
+
+
+.img_write{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.3s;
+}
+
+.img_write p{
+    width: 80px;
+    font-size: 20px;
+    transform: scaleY(0);
+    transition: 0.4s;
+    font-weight:bolder;
+}
+
+.partner:hover .img_write{
+    background-color: rgba(255, 253, 253, 0.847);
+}
+
+.partner:hover .img_write p{
+    transform: scaleY(1);
+}
+
+
+/* News Melumat ve balaca shekil */
+
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: gainsboro;
+    padding: 10px 200px;
+    height: 100vh;
+}
+
+.news_head{
+    display: flex;
+    justify-content: space-between;
+    font-family:"Gruppo", sans-serif;
+    margin: 50px 0px;
+    padding: 30px 0px;
+}
+.news_head h1{
+    font-size: 40px;
+}
+.news_head p{
+    font-size: 20px;
+    width:650px;
+}
+
+
+.news_imgs{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(2,2fr);
+    position: relative;
+    gap: 60px;
+}
+
+.news_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.img1{
+    width: 170px;
+    height: 100px;
+    position: relative;
+    transition: 5s;
+}
+
+.img1 img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: relative;
+}
+
+.img_white{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0);
+}
+.img1:hover a .img_white{
+    background-color: rgba(255, 255, 255, 0.822);
+  
+}
+
+.news_about{
+    font-size: 17px;
+    font-family: "Gruppo", sans-serif;
+    grid-column: 2/4;
+    width: 100%;
+}
+
+.news_about a:link,
+.news_about a:visited{
+    color: black;
+    transition: 0.5s;
+}
+
+.news_about a:hover{
+    color: orange;
+}
+
+
+.news_foot{
+    margin: 40px 0px;
+    width: 100%;
+    font-family: "Gruppo", sans-serif;
+    display: block;
+    position: relative;
+}
+.news_foot a:link,
+.news_foot a:visited{
+ color: black;
+ 
+}
+.news_foot a{
+    font-family: "Gruppo", sans-serif;
+    cursor: pointer;
+    font-size: 25px;
+}
+.news_foot a:hover{
+    color: grey;
+}
+
+
+
+/* Footer - Son hisse */
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 100px;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Gruppo", sans-serif;
+}
+footer a:link,
+footer a:visited{
+    color: black;
+}
+
+.foot3 ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row; 
+    gap: 20px;
+    
+}
+
+.foot3 ul a{
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.foot3 ul a::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    transition: 1s;
+    background-color: lightskyblue;
+}
+
+.foot3 ul a:hover{
+    color: lightskyblue;
+   
+}
+.foot3 ul a:hover::before{
+    width:100%;
+   
+}
+
+.foot3 ul  i{
+    color:goldenrod;
+    background-color: black;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+
+
+.foot1 a{
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.foot1 a::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    transition: 1s;
+    background-color: orange;
+}
+
+.foot1 a:hover{
+    color: orange;
+   
+}
+
+.foot1 a:hover::before{
+    width:100%;
+   
+}
+
+
+.foot2{
+    transition: 1s;
+}
+.foot2:hover{
+    transform: scale(130%);
+}
+
+
+/* flex Buton */
+
+.btn{
+    position: fixed;
+    background-color: black;
+    padding: 17px 17px;
+    border-radius: 24px;
+    bottom: 30px;
+    left: 40px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    z-index: 2;
+    font-family: "Gruppo", sans-serif;
+}
+
+.btn i{
+    color: rgb(122, 186, 90);
+}
+
+.btn:hover{
+    background-color: rgb(122, 186, 90);
+    color: white;
+}
+
+.btn:hover i{
+    color: rgb(242, 244, 240);
+
+}
+
